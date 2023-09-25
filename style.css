@@ -1,0 +1,22 @@
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background:linear-gradient(to bottom, pink, yellow);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-with-gradient {
+    color:  linear-gradient(to right, pink, yellow);
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;" class="text-with-gradient">Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()" method="post">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="confirmPassword">Re-enter Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label><br><br>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required><br><br>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select><br><br>
+
+            <label for="languages">Languages known</label>
+            <input type="checkbox" id="english" name="languages[]" value="English">
+            <label for="english">English</label>
+            <input type="checkbox" id="kannada" name="languages[]" value="Kannada">
+            <label for="kannada">Kannada</label>
+            <input type="checkbox" id="hindi" name="languages[]" value="Hindi">
+            <label for="hindi">Hindi</label>
+            <input type="checkbox" id="telugu" name="languages[]" value="Telugu">
+            <label for="telugu">Telugu</label><br><br>
+
+            <label for="declaration">
+                <input type="checkbox" id="declaration" name="declaration" required>
+                Hereby I declare all the given details are true
+            </label><br><br>
+
+            <input type="submit" value="Register" style ="background-color: rgb(51, 255, 0); font-weight: bold">
+        </form>
+    </div>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabetical Order</title>
+</head>
+<body>
+    <h1>Sort Letters in Alphabetical Order</h1>
+    
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="sortString()">Sort</button>
+
+    <p id="output">Alphabetically sorted string will be displayed here.</p>
+
+    <script>
+        function sortString() {
+            // Get the input string
+            let inputString = document.getElementById("inputString").value;
+
+            // Convert the string to an array of characters, sort it, and join it back into a string
+            let sortedString = inputString.split('').sort().join('');
+
+            // Display the sorted string
+            document.getElementById("output").textContent = "Alphabetically sorted string: " + sortedString;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date and Time</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td id="date"></td>
+            <td id="time"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Function to update the date and time
+        function updateTime() {
+            const now = new Date();
+
+            // Get the date in the format: Month Day, Year
+            const dateElement = document.getElementById("date");
+            dateElement.textContent = now.toLocaleDateString();
+
+            // Get the time in the format: Hour:Minute:Second
+            const timeElement = document.getElementById("time");
+            timeElement.textContent = now.toLocaleTimeString();
+        }
+
+        // Call updateTime() to initially display the date and time
+        updateTime();
+
+        // Update the date and time every second
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
